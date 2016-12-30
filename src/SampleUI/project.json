@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+  "frameworks": {
+    "net452": {
+    }
+  },
+  "dependencies": {
+    "Persistence": "1.0.0-*",
+    "SampleDomain": "1.0.0-*",
+    "Autofac.Extensions.DependencyInjection": "4.0.0"
+  }
+}
