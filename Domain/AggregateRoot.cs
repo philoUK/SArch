@@ -40,6 +40,7 @@ namespace Domain
             this.Version++;
             @event.AggregateId = this.Id;
             @event.Version = this.Version;
+            @event.AggregateType = this.GetType().AssemblyQualifiedName;
             this.changes.Add(@event);
         }
 

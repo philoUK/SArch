@@ -10,6 +10,7 @@
   "dependencies": {
     "Persistence": "1.0.0-*",
     "SampleDomain": "1.0.0-*",
-    "Autofac.Extensions.DependencyInjection": "4.0.0"
+    "Autofac.Extensions.DependencyInjection": "4.0.0",
+    "Persistence.Azure": "1.0.0-*"
   }
 }

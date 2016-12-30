@@ -11,10 +11,9 @@ namespace SampleUI
         private static IContainer Container;
         private static IRepository<Order> orderRepository;
 
-        //private static Repository<Order> orderRepository;
-
         public static void Main(string[] args)
         {
+            Container = AutofacSetup.Configure();
             orderRepository = Container.Resolve<IRepository<Order>>();
             AcceptOrders();
         }

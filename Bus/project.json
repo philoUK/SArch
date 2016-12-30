@@ -1,11 +1,10 @@
-﻿{
+{
   "version": "1.0.0-*",
   "frameworks": {
     "net452": {
     }
   },
   "dependencies": {
-    "Domain": "1.0.0-*",
-    "Autofac": "4.2.1"
+    "Domain": "1.0.0-*"
   }
 }

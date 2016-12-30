@@ -6,6 +6,7 @@
     }
   },
   "dependencies": {
+    "Bus": "1.0.0-*",
     "Domain": "1.0.0-*",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Moq": "4.6.38-alpha",

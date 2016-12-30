@@ -7,10 +7,12 @@ namespace Persistence
     public class Repository<T> : IRepository<T> where T: AggregateRoot
     {
         private readonly IEventStore eventStore;
+        private readonly IEventPublisher eventPublisher;
 
-        public Repository(IEventStore eventStore)
+        public Repository(IEventStore eventStore, IEventPublisher eventPublisher = null)
         {
             this.eventStore = eventStore;
+            this.eventPublisher = eventPublisher ?? new NullEventPublisher();
         }
 
 
@@ -32,6 +34,7 @@ namespace Persistence
             if (events.Any())
             {
                 this.eventStore.SaveEventsFor(root.Id, events);
+                this.eventPublisher.PublishEvents(events);
                 root.ClearChanges();
             }
         }
